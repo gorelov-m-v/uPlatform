@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://mysql-development-01.b2bdev.pro:3306/beta-02_player</property>
+        <property name="hibernate.connection.username">mgorelov</property>
+        <property name="hibernate.connection.password">iiYWevaX9mATBIs1i4QX9Z3Yy</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Update database on startup -->
+        <property name="hibernate.hbm2ddl.auto">none</property>
+
+        <!-- Annotated entity classes -->
+        <mapping class="model.database.Account"/>
+
+    </session-factory>
+</hibernate-configuration>
