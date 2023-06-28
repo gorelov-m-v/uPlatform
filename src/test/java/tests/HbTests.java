@@ -22,4 +22,10 @@ public class HbTests {
                                                             "323dsfdsufhsdlfh");
         app.producer().sendMessage(record);
     }
+
+    @Test
+    public void readFromConf() {
+        String host = app.config().KAFKA_BROKER_FIRST;
+        System.out.println(host);
+    }
 }

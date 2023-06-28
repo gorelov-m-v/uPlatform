@@ -4,6 +4,7 @@ public class ApplicationManager {
 
     private DbHelper db;
     private Producer producer;
+    private ConfigProvider conf;
 
     public DbHelper db() {
         if(db == null) {
@@ -17,5 +18,12 @@ public class ApplicationManager {
             producer = new Producer(this);
         }
         return producer;
+    }
+
+    public ConfigProvider config() {
+        if(conf == null) {
+            conf = new ConfigProvider(this);
+        }
+        return conf;
     }
 }
